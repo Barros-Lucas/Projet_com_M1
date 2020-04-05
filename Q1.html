@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<link href="style.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="q1" style="">
+  <div class="card" id="card_front_q1" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/moi.png" class="card-img-top" alt="img_moi_01.jpg">
+    <div class="card-body">
+      <h5 class="card-title">Entraînement</h5>
+      <hr>
+      <p class="card-text">Je m'appelle Lucas Barros</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q1')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q1')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q1" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Entraînement</h4>
+          <h6 class="card-subtitle mb-2">Vrai</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description" role="tabpanel">
+              <p class="card-text">Effectivement je m'appelle Lucas</p>
+              <button onclick="suivant('q1','q2')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Aucune analyse sur mon prénom </p>
+              <button onclick="suivant('q1','q2')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Aucun contexte supplémrentaire</p>
+              <button onclick="suivant('q1','q2')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+
+<div id="q2" style="display:none">
+  <div class="card" id="card_front_q2" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/pinocchio_01.png" class="card-img-top" alt="pinocchio_01.png">
+    <div class="card-body">
+      <h5 class="card-title">Attentes professionelles</h5>
+      <hr>
+      <p class="card-text">J’ai menti à un recruteur en lui disant que j’étais très à l’aise avec une technologie alors que je ne la connaissais pas</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q2')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q2')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q2" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q2" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q2" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q2" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Attentes professionelles</h4>
+          <h6 class="card-subtitle mb-2">Vrai</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q2" role="tabpanel">
+              <p class="card-text">Mon alternance de L3 a été obtenue en expliquant savoir parfaitement faire des sites web alors que je n’en avais jamais fait</p>
+              <button onclick="suivant('q2','q3')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q2" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Je savais que le sujet en lui-même n’était pas compliqué, et j’avais besoin de cette motivation pour me prouver que j’étais capable d’apprendre vite et bien une technologie dans le but d’être prêt avant le début</p>
+              <button onclick="suivant('q2','q3')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q2" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Après mon IUT informatique, j’ai raté mon entrée en école d’ingénieur. J’étais très déçu de moi et j’avais besoin de voir que j’avais réellement les compétences que je pensais avoir : apprendre vite et bien un sujet</p>
+              <button onclick="suivant('q2','q3')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<div id="q3" style="display:none">
+  <div class="card" id="card_front_q3" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/calme_03.png" class="card-img-top" alt="calme_03.png">
+    <div class="card-body">
+      <h5 class="card-title">Attentes professionelles</h5>
+      <hr>
+      <p class="card-text">Au début de mon alternance cette année à SopraStéria, je faisais une mission très simple et je n’ai rien dit pour pouvoir être au calme.</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q3')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q3')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q3" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q3" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q3" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q3" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Attentes professionelles</h4>
+          <h6 class="card-subtitle mb-2">Non</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q3" role="tabpanel">
+              <p class="card-text">Surtout pas !<br>Dès que j’ai pu je leur ai demandé de changer de mission plus dure, où j’allais pouvoir monter en compétence.</p>
+              <button onclick="suivant('q3','q4')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q3" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Je déteste me sentir inutile et j’ai besoin de toujours être stimulé, réfléchir et passer du temps à trouver la bonne solution.<br>
+J’ai demandé une mission mettant en œuvre des technologies pas vue en cours pour vraiment rendre utilise la période d’alternance.</p>
+              <button onclick="suivant('q3','q4')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q3" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Je savais qu’au début ils n’avaient que cette mission pour moi alors j’ai attendu la fin du mois pour parler au bilan. Je leur ai bien demandé de partir sur un projet plus complexe, avec si possible des technologies plus complexes. </p>
+              <button onclick="suivant('q3','q4')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<div id="q4" style="display:none">
+  <div class="card" id="card_front_q4" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/livre_04.png" class="card-img-top" alt="livre_04.png">
+    <div class="card-body">
+      <h5 class="card-title">Parcours</h5>
+      <hr>
+      <p class="card-text">Après mon Bac S, je devais faire une classe préparatoire Littéraire</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q4')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q4')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q4" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q4" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q4" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q4" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Parcours</h4>
+          <h6 class="card-subtitle mb-2">Non</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q4" role="tabpanel">
+              <p class="card-text">Mais je devais partir en classe préparatoire Maths supp. J’avais comme objectif de rentrer dans une école d’ingénieur aéronautique. </p>
+              <button onclick="suivant('q4','q5')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q4" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">J’ai choisi au dernier moment l’informatique et L’IUT informatique car je savais que grâce à l’informatique je pouvais faire plus de choses et beaucoup plus utile qu’avec mon niveau de maths</p>
+              <button onclick="suivant('q4','q5')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q4" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Lors de mes choix APB, j’ai validé le choix de l’IUT au lieu de celui de la prépa à Tarbes. Je remarque maintenant que j’ai bien fait car je suis arrivé à mes objectifs.</p>
+              <button onclick="suivant('q4','q5')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q5" style="display:none">
+  <div class="card" id="card_front_q5" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/alternance_05.png" class="card-img-top" alt="alternance_05.png">
+    <div class="card-body">
+      <h5 class="card-title">Parcours</h5>
+      <hr>
+      <p class="card-text">Après l’IUT j’ai choisi une licence me permettant de faire des maths et proposant une alternance</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q5')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q5')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q5" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q5" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q5" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q5" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Parcours</h4>
+          <h6 class="card-subtitle mb-2">Oui</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q5" role="tabpanel">
+              <p class="card-text">Et j’ai réussi à trouver. <br>
+La licence3 MIASHS proposait exactement ce que je voulais</p>
+              <button onclick="suivant('q5','q6')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q5" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">J’avais besoin de continuer les maths et l’alternance me permet d’augmenter mes connaissances pratique, ce que l’école ne peut pas toujours faire.</p>
+              <button onclick="suivant('q5','q6')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q5" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Après le refus de ma demande en école d’ingé, je suis partie sur une licence en alternance pour cibler un sujet que je voulais apprendre dans un contexte d’entreprise </p>
+              <button onclick="suivant('q5','q6')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q6" style="display:none">
+  <div class="card" id="card_front_q6" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/these_06.png" class="card-img-top" alt="these_06.png">
+    <div class="card-body">
+      <h5 class="card-title">Parcours</h5>
+      <hr>
+      <p class="card-text">Après mon master je veux faire une thèse en informatique</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q6')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q6')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q6" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q6" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q6" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q6" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Parcours</h4>
+          <h6 class="card-subtitle mb-2">Oui et non...</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q6" role="tabpanel">
+              <p class="card-text">J’ai toujours rêvé de faire une thèse pour être enseignant chercheur. Cependant je me rends compte que je peux enseigner et toujours apprendre.</p>
+              <button onclick="suivant('q6','q12')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q6" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">La thèse me permet de crédibiliser mes connaissances surtout à l’étranger. C’est aussi le plus haut statut scolaire et je trouve que ce serait la meilleure des façons d’arrêter l’école.</p>
+              <button onclick="suivant('q6','q12')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q6" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Depuis petit je me dis que la thèse est l’étape finale des études. Mais le salaire, la difficulté et savoir qu’en entreprise je peux faire les mêmes choses, me font de plus en plus réfléchir</p>
+              <button onclick="suivant('q6','q12')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q7" style="display:none">
+  <div class="card" id="card_front_q7" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/drive_07.png" class="card-img-top" alt="drive_07.png">
+    <div class="card-body">
+      <h5 class="card-title">Personnalité</h5>
+      <hr>
+      <p class="card-text">Pour moi, le pilotage m’a apporté d’être : concentré dans le stress, persévérant, déterminé</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q7')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q7')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q7" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q7" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q7" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q7" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Personnalité</h4>
+          <h6 class="card-subtitle mb-2">Oui</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q7" role="tabpanel">
+              <p class="card-text">La pression constante et les prises de décisions rapides, m’ont amené à l’être tout le temps. </p>
+              <button onclick="suivant('q7','q8')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q7" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Avec ces traits de personnalités, je peux facilement garder mon calme en cas crise au travail, et me pousse toujours à faire mieux</p>
+              <button onclick="suivant('q7','q8')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q7" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Le karting et la simulation de course ont accentué certains de mes traits de caractères</p>
+              <button onclick="suivant('q7','q8')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q8" style="display:none">
+  <div class="card" id="card_front_q8" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/friends_08.png" class="card-img-top" alt="friends_08.png">
+    <div class="card-body">
+      <h5 class="card-title">Personnalité</h5>
+      <hr>
+      <p class="card-text">Je préfère être seul qu’en groupe</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q8')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q8')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q8" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q8" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q8" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q8" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Personnalité</h4>
+          <h6 class="card-subtitle mb-2">Non</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q8" role="tabpanel">
+              <p class="card-text">Je suis beaucoup plus heureux entouré de mes amis et de ma famille. Je suis régulièrement au téléphone avec eux, quand comme actuellement, nous ne pouvons pas nous voir.</p>
+              <button onclick="suivant('q8','q9')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q8" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Être avec des gens que l’on aime est plus important et est une valeur les plus importante</p>
+              <button onclick="suivant('q8','q9')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q8" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">En ce temps de crise, c’est difficile pour moi, mais je garde le contact très régulièrement avec mes amis. J’ai la chance d’être avec ma famille déjà.</p>
+              <button onclick="suivant('q8','q9')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q9" style="display:none">
+  <div class="card" id="card_front_q9" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/langue_10.png" class="card-img-top" alt="langue_10.png">
+    <div class="card-body">
+      <h5 class="card-title">Personnalité</h5>
+      <hr>
+      <p class="card-text">J’apprends de nouvelles langues </p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q9')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q9')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q9" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q9" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q9" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q9" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Personnalité</h4>
+          <h6 class="card-subtitle mb-2">Oui</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q9" role="tabpanel">
+              <p class="card-text">J’aime énormément me renseigner, lire des livres dans une culture différente. Malheureusement, la traduction enlève beaucoup d’âme au texte et de sens profonds</p>
+              <button onclick="suivant('q9','q10')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q9" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">J’aime comprendre le fonctionnement de nouvelles cultures. Ca m’apporte beaucoup au quotidiens et avec les gens. Spirituellement et philosophiquement, comprendre et assimiler de nouvelles cultures apporte un esprit de vie plus construit. </p>
+              <button onclick="suivant('q9','q10')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q9" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Je suis actuellement en train d’apprendre le Coréen et j’ai du malheureusement mettre en pause l’arabe.</p>
+              <button onclick="suivant('q9','q10')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q10" style="display:none">
+  <div class="card" id="card_front_q10" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/racing_10.png" class="card-img-top" alt="racing_10.png">
+    <div class="card-body">
+      <h5 class="card-title">Centres d'intérêt</h5>
+      <hr>
+      <p class="card-text">Je déteste les sports automobiles</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q10')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q10')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q10" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q10" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q10" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q10" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Centres d'intérêts</h4>
+          <h6 class="card-subtitle mb-2">Non</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q10" role="tabpanel">
+              <p class="card-text">J’en parle trop souvent pour qu’on puisse en douter.</p>
+              <button onclick="suivant('q10','q11')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q10" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">La course me permet de mettre à la limite mes capacités et me permet de m’évader. J’attends tous les étés de pouvoir reprendre le karting.</p>
+              <button onclick="suivant('q10','q11')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q10" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Depuis 2 ans j’ai la chance de pouvoir réaliser ma passion de conduire. C’est une passion qui coûte très cher et ce n’est pas toujours facile. <br>
+J’ai investi dans un volant de simulation, me permettant de faire de chez moi des courses, accélérant la progression.</p>
+              <button onclick="suivant('q10','q11')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<div id="q11" style="display:none">
+  <div class="card" id="card_front_q11" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/jardinage_11.png" class="card-img-top" alt="jardinage_11.png">
+    <div class="card-body">
+      <h5 class="card-title">Centres d'intérêts</h5>
+      <hr>
+      <p class="card-text">J’adore le jardinage</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q11')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q11')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q11" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q11" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q11" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q11" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Centres d'intérêts</h4>
+          <h6 class="card-subtitle mb-2">Vrai</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q11" role="tabpanel">
+              <p class="card-text">C’est un des passe-temps que je préfère, surtout les arbres et les bonsaïs. </p>
+              <button onclick="suivant('q11','fin')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q11" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Je suis au calme, je m’occupe des plantes. C’est un des rares moments ou je suis patient et où je prends du temps pour faire quelque choses d'uniquement artistiques.</p>
+              <button onclick="suivant('q11','fin')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q11" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Pour moi le jardinage et la taille des arbres est une forme d’art. Les bonsaïs sont une passion et même si ça demande beaucoup de travail, c’est un plaisir.</p>
+              <button onclick="suivant('q11','fin')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q12" style="display:none">
+  <div class="card" id="card_front_q12" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/travel.png" class="card-img-top" alt="travel.png">
+    <div class="card-body">
+      <h5 class="card-title">Attentes personnelles</h5>
+      <hr>
+      <p class="card-text">Je rêve de voyager dans le monde entier </p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q12')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q12')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q12" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q12" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q12" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q12" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Attentes personnelles</h4>
+          <h6 class="card-subtitle mb-2">Vrai</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q12" role="tabpanel">
+              <p class="card-text">Je veux voyager dans tous les pays et apprendre toutes les langues et cultures possibles</p>
+              <button onclick="suivant('q12','q13')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q12" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">J’aime énormément rencontrer de nouvelles personnes, surtout si elles sont différentes de moi</p>
+              <button onclick="suivant('q12','q13')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q12" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Je suis actuellement en train d’apprend le coréen pour pouvoir y aller à la fin de mes études. Mon rêve serait de vivre en Amérique latine pour vivre ma retraite</p>
+              <button onclick="suivant('q12','q13')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="q13" style="display:none">
+  <div class="card" id="card_front_q13" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/entreprise.png" class="card-img-top" alt="entreprise.png">
+    <div class="card-body">
+      <h5 class="card-title">Attentes personnelles</h5>
+      <hr>
+      <p class="card-text">Je veux travailler toute ma vie dans une entreprise</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q13')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q13')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q13" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q13" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q13" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q13" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Attentes personnelles</h4>
+          <h6 class="card-subtitle mb-2">Non</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q13" role="tabpanel">
+              <p class="card-text">Mon objectif serait de pouvoir vivre de rente et d’investissement immobiliers. Cela me permettra de consacrer mon temps à apporter mon aide dans des associations sans avoir besoin d’argents supplémentaires</p>
+              <button onclick="suivant('q13','q14')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q13" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">Pour moi la rente, serait le moyen de construire ma vie autours de mes passions et réaliser mes rêves sans avoir à travailler dans un domaine qui ne me plaît pas</p>
+              <button onclick="suivant('q13','q14')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q13" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">Cet objectif d’argent autonome et apporter mes connaissances serait mon objectif final. Je pourrai ainsi partir dans des pays étrangers, donner des cours.</p>
+              <button onclick="suivant('q13','q14')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<div id="q14" style="display:none">
+  <div class="card" id="card_front_q14" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/table.png" class="card-img-top" alt="table.png">
+    <div class="card-body">
+      <h5 class="card-title">Attentes personnelles</h5>
+      <hr>
+      <p class="card-text">Avoir le temps et la place de faire de grand repas entre amis/famille</p>
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <button type="button" onclick="reverseCard(0,'q14')" class="btn btn-danger" style=" ">X</button>
+      <!-- <button type="button" onclick="" class="btn btn-dark" style="">Fin</button> -->
+      <button type="button" onclick="reverseCard(1,'q14')" class="btn btn-success" style=" ">V</button>
+    </div>
+
+  </div>
+
+      <div class="card" id="card_back_q14" style="width: 25rem;display:none">
+        <div class="card-header" style="">
+          <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="#description_q14" role="tab" aria-controls="description" aria-selected="true">Description</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="#analyse_q14" role="tab" aria-controls="history" aria-selected="false">Analyse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contexte_q14" role="tab" aria-controls="deals" aria-selected="false">Contexte</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Attentes personnelles</h4>
+          <h6 class="card-subtitle mb-2">Vrai</h6>
+
+           <div class="tab-content mt-3">
+            <div class="tab-pane active" id="description_q14" role="tabpanel">
+              <p class="card-text">Une grande maison, une grande table remplie des gens que j’aime</p>
+              <button onclick="suivant('q14','q7')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="analyse_q14" role="tabpanel" aria-labelledby="analyse-tab">
+              <p class="card-text">J’ai besoin d’être entouré des gens qui me rendent heureux pour avancer dans mes objectifs. Ils me soutiennent et me cadres</p>
+              <button onclick="suivant('q14','q7')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+
+            <div class="tab-pane" id="contexte_q14" role="tabpanel" aria-labelledby="contexte-tab">
+              <p class="card-text">J’essaie déjà à mon échelle de réunir mes proches autour d’un repas pour passer de bons moments, mais je rêve de pouvoir faire ça sur de longues après-midis d’été.</p>
+              <button onclick="suivant('q14','q7')" class="btn btn-danger btn-sm">Question suivante</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<div id="fin" style="display:none">
+  <div class="card" id="card_front_fin" style="width: 18rem;">
+    <!-- <img src="../images/img_moi_01.jpg" class="card-img-top" alt="img_moi_01.jpg"> -->
+    <img src="../images/bravo.png" class="card-img-top" alt="bravo.png">
+    <div class="card-body">
+      <h5 class="card-title">Merci d'avoir participé</h5>
+      <hr>
+      <p class="card-text" id = "score">Votre score est de : /13<br></p>
+
+
+    </div>
+    <div class="card-footer text-center" style="">
+      <a href="index.html" class="btn btn-dark" style="">Accueil</a>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+  $('#bologna-list a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+$('#bologna-list-q2 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q3 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q4 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q5 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q6 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q7 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q8 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q9 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q10 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q11 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q12 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q13 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+$('#bologna-list-q14 a').on('click', function (e) {
+e.preventDefault()
+$(this).tab('show')
+})
+
+//2 = these donc oui et non
+const responses = [1,1,0,0,1,2,1,0,1,1,0,1,0,1]
+let score = 0;
+let numQ = 0;
+
+function reverseCard(response,q){
+let front = "card_front_".concat(q);
+let back = "card_back_".concat(q);
+document.getElementById(front).style.display = "none";
+document.getElementById(back).style.display = "";
+if(response == responses[numQ] || responses[numQ]==2){
+  console.log("+1")
+  score+=1;
+}
+numQ +=1;
+document.getElementById("score").innerHTML = "Votre score est de :"+score+"/14";
+
+}
+
+function suivant(qi,qn){
+  document.getElementById(qi).style.display = "none";
+  document.getElementById(qn).style.display = "";
+}
+
+</script>
+</html>
